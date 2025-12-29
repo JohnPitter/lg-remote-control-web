@@ -1,0 +1,331 @@
+.container {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #ffffff 0%, #b3b3b3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.connectionStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.625rem 1.25rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.statusIndicator {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background-color: #666666;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.statusIndicator.connected {
+  background-color: #4CAF50;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+}
+
+.statusText {
+  font-size: 0.875rem;
+  color: #E0E0E0;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.connectionPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.discoverySection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.errorMessage {
+  padding: 1.25rem;
+  background: rgba(255, 82, 82, 0.12);
+  border: 1px solid rgba(255, 82, 82, 0.3);
+  border-radius: 14px;
+  color: #FF8A8A;
+  font-size: 0.875rem;
+  text-align: center;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+.infoMessage {
+  padding: 1.25rem;
+  background: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 14px;
+  color: #60A5FA;
+  font-size: 0.875rem;
+  text-align: center;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  margin-bottom: 1rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.25rem 0;
+  color: #808080;
+  font-size: 0.813rem;
+  font-weight: 500;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.divider span {
+  padding: 0 1.25rem;
+}
+
+.manualInputSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 14px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.manualActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.remoteContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.powerSection {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+}
+
+.stateDisplay {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 0.5rem;
+}
+
+.stateItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-width: 120px;
+}
+
+.stateLabel {
+  font-size: 0.75rem;
+  color: #999999;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.stateValue {
+  font-size: 1.25rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.navigationPad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 0;
+}
+
+.navRow {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeSection {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 0;
+}
+
+.backMuteControls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  max-width: 70%;
+  margin: 0 auto;
+  padding-bottom: 0.5rem;
+}
+
+.volumeControls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.channelControls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.mediaControls {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.625rem;
+  padding-top: 0.5rem;
+}
+
+.disconnectSection {
+  padding: 0 2rem;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem 0.75rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .remoteContainer {
+    padding: 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .connectionPanel {
+    padding: 1.5rem;
+  }
+
+  .navigationPad {
+    gap: 0.5rem;
+  }
+
+  .navRow {
+    gap: 0.5rem;
+  }
+
+  .volumeControls,
+  .channelControls,
+  .backMuteControls {
+    gap: 0.5rem;
+  }
+
+  .homeSection {
+    padding: 0.25rem 0;
+  }
+
+  .backMuteControls {
+    max-width: 80%;
+  }
+
+  .mediaControls {
+    gap: 0.4rem;
+  }
+
+  .stateDisplay {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .stateItem {
+    min-width: auto;
+    padding: 0.5rem 1rem;
+  }
+
+  .stateValue {
+    font-size: 1.1rem;
+  }
+}

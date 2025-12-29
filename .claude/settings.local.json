@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create vite@latest . -- --template react-ts)",
+      "Bash(npm init:*)",
+      "Bash(npm install react react-dom)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm test:*)",
+      "Bash(npm audit fix:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npx tsx:*)",
+      "WebSearch",
+      "Bash(npm run test:wss:*)",
+      "Bash(npm run dev:server:*)",
+      "Bash(npm run test:proxy-flow:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(npm run dev:all:*)",
+      "Bash(npm run dev:*)",
+      "Bash(timeout:*)",
+      "Bash(copy /b server\\src\\index.ts +,,)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
